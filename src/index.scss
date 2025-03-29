@@ -1,0 +1,84 @@
+@import "./styles/mixins.scss";
+
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 400;
+  src: url("./assets/fonts/Gilroy-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 700;
+  src: url("./assets/fonts/Gilroy-Bold.woff2") format("woff2");
+}
+
+:root {
+  font-family: Gilroy, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  background: #141414 !important;
+}
+body {
+  font-family: "Gilroy", sans-serif;
+  margin: 0;
+}
+
+button {
+  border: none;
+  padding-top: auto;
+  padding-bottom: auto;
+  cursor: pointer;
+}
+
+input {
+  cursor: pointer;
+}
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,116 @@
+@import "../../styles/mixins.scss";
+
+.block {
+  width: 100%;
+  max-width: 295px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #262626;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  @include tablet {
+    max-width: 313px;
+    padding: 27px 20px;
+  }
+  @include desktop {
+    margin-top: 58px;
+    padding: 20px;
+  }
+}
+
+.title {
+  color: #e3e3e3;
+  font-size: 18px;
+  margin-bottom: 14px;
+  font-weight: 700;
+  line-height: 18px; /* 100% */
+  letter-spacing: -0.36px;
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.4px;
+    margin-bottom: 20px;
+  }
+}
+
+.bookList {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin-bottom: 11px;
+  list-style: none;
+  overflow-x: auto;
+  @include tablet {
+    margin-bottom: 14px;
+  }
+}
+
+.bookCard {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 71px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  max-height: 107px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.name {
+  margin-top: 8px;
+  color: #e3e3e3;
+
+  font-size: 10px;
+
+  font-weight: 700;
+  line-height: 12px; /* 120% */
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.author {
+  margin-top: 2px;
+  color: #686868;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px; /* 120% */
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.view {
+  display: flex;
+  justify-content: space-between;
+}
+
+.viewAll {
+  display: inline-flex;
+  justify-content: space-between;
+  color: #686868;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px; /* 116.667% */
+  letter-spacing: -0.24px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  padding-top: 6px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}

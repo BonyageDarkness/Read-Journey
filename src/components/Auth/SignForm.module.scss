@@ -1,0 +1,372 @@
+@import "../../styles/mixins.scss";
+
+.signContainer {
+  max-width: 335px;
+
+  margin: 0 auto;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  gap: 10px;
+
+  @include tablet {
+    max-width: 704px;
+  }
+  @include desktop {
+    max-width: 1216px;
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+
+.form {
+  border-radius: 30px;
+  background: #1f1f1f;
+  padding: 20px;
+  @include tablet {
+    padding: 40px 168px 194px 64px;
+  }
+  @include desktop {
+    width: 50%;
+    padding: 40px 64px 20px 64px;
+  }
+}
+
+.icon {
+  width: 42px;
+  height: 17px;
+  margin-bottom: 40px;
+  @include tablet {
+    margin-bottom: 157px;
+  }
+  @include desktop {
+    margin-bottom: 107px;
+  }
+}
+
+.logoContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.logoText {
+  color: #f9f9f9;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; /* 100% */
+  letter-spacing: 0.36px;
+  text-transform: uppercase;
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.title {
+  color: #f9f9f9;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 100% */
+
+  margin-bottom: 20px;
+  @include tablet {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 1.28px;
+
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    width: 444px;
+  }
+}
+
+.highlight {
+  color: #888;
+}
+
+.labelContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wrapperLabel {
+  position: relative;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  position: absolute;
+  top: 28%;
+  left: 14px;
+
+  color: #686868;
+  font-size: 12px;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.2s ease-in-out;
+  white-space: nowrap;
+  @include tablet {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.28px;
+  }
+}
+
+.error {
+  max-height: 4px;
+  font-size: 10px;
+  color: #e90516;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: -0.2px;
+  padding-left: 14px;
+  @include tablet {
+    max-height: 8px;
+    font-size: 12px;
+    line-height: 14px; /* 116.667% */
+    letter-spacing: -0.24px;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.inputError {
+  border-radius: 12px;
+  border: 1px solid #e90516;
+  background: #262626;
+}
+
+.inputSuccess {
+  border-radius: 12px;
+  border: 1px solid #30b94d;
+  background: #262626;
+}
+.successMessage {
+  max-height: 4px;
+  font-size: 10px;
+  color: #30b94d;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: -0.2px;
+  padding-left: 14px;
+  padding-top: 4px;
+  @include tablet {
+    max-height: 8px;
+    font-size: 12px;
+    line-height: 14px; /* 116.667% */
+    letter-spacing: -0.24px;
+  }
+}
+
+input {
+  width: 100%;
+  padding: 14px 14px 14px 14px;
+  background: #1c1c1c;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid rgba(249, 249, 249, 0.1);
+  border-radius: 12px;
+  background: #262626;
+  margin-bottom: 4px;
+}
+
+.inputName {
+  text-indent: calc(49px);
+}
+.inputEmail {
+  text-indent: calc(39px);
+}
+
+.inputPassword {
+  text-indent: calc(68px);
+}
+
+.inputIconError {
+  position: absolute;
+  top: 28%;
+  right: 12px;
+  width: 18px;
+  height: 18px;
+}
+
+.inputIconSuccess {
+  position: absolute;
+  top: 28%;
+  right: 12px;
+  width: 18px;
+  height: 18px;
+}
+
+.passwordWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.togglePassword {
+  position: absolute;
+  right: 13px;
+  top: 28%;
+
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+}
+
+.eyeIcon {
+  width: 18px;
+  height: 18px;
+
+  transition: fill 0.3s ease-in-out;
+}
+
+.containerButton {
+  display: flex;
+
+  align-items: center;
+  margin: 20px 0;
+  gap: 14px;
+  @include tablet {
+    margin: 82px 0 20px 0;
+    gap: 20px;
+  }
+}
+
+.containerButtonLogin {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin: 72px 0 20px 0;
+  gap: 14px;
+  @include tablet {
+    margin: 142px 0 20px 0;
+    gap: 20px;
+  }
+}
+
+.button {
+  padding: 12px 29px;
+  border: none;
+  border-radius: 30px;
+  background: #f9f9f9;
+  font-family: Gilroy;
+  color: #1f1f1f;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: 0.28px;
+  cursor: pointer;
+  @include tablet {
+    padding: 16px 54px;
+    font-size: 20px;
+    line-height: 20px; /* 100% */
+    letter-spacing: 0.4px;
+  }
+  @include desktop {
+  }
+}
+
+.buttonLogin {
+  padding: 12px 45px;
+  border: none;
+  border-radius: 30px;
+  background: #f9f9f9;
+  font-family: Gilroy;
+  color: #1f1f1f;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: 0.28px;
+  cursor: pointer;
+  @include tablet {
+    padding: 16px 54px;
+    font-size: 20px;
+    line-height: 20px; /* 100% */
+    letter-spacing: 0.4px;
+  }
+}
+
+.switch {
+  color: #686868;
+
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px; /* 116.667% */
+  letter-spacing: -0.24px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+  }
+}
+
+.switch a {
+  color: #888;
+}
+
+.containerForm {
+  border-radius: 30px;
+  background: #1f1f1f;
+  padding: 20px 40px;
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    padding: 80px 97px 0 96px;
+  }
+}
+
+.responsiveImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  @include desktop {
+    max-width: 405px;
+  }
+}

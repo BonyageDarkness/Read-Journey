@@ -1,0 +1,265 @@
+@import "../../styles/mixins.scss";
+
+.header {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 335px;
+  height: 57px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background: #1f1f1f;
+  padding: 20px;
+
+  @include tablet {
+    padding: 16px;
+    max-width: 704px;
+    height: 74px;
+  }
+  @include desktop {
+    max-width: 1216px;
+  }
+}
+
+.icon {
+  width: 42px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 4px;
+  @include tablet {
+    margin-right: 223px;
+  }
+  @include desktop {
+    margin-right: 334px;
+  }
+}
+
+.logoText {
+  color: #f9f9f9;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}
+.logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 4px;
+  justify-content: center;
+}
+
+.navContainer {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 200px;
+  height: 100vh;
+  background: #262626;
+  padding: 40px;
+  transition: right 0.3s ease-in-out;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+
+  @include tablet {
+    display: flex;
+    position: static;
+    flex-grow: 1;
+    justify-content: center;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+  }
+}
+
+.navContainer.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: 0;
+  z-index: 999;
+  padding-top: 240px;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 40px;
+    text-align: center;
+  }
+}
+
+.navList li a {
+  text-decoration: none;
+
+  transition: color 0.3s;
+}
+
+.active {
+  color: #f9f9f9;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.28px;
+  @include tablet {
+    font-size: 16px;
+    letter-spacing: -0.32px;
+  }
+}
+
+.inactive {
+  color: #686868;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.28px;
+  @include tablet {
+    font-size: 16px;
+    letter-spacing: -0.32px;
+  }
+}
+
+.underline {
+  display: block;
+  margin-top: 4px;
+}
+
+.logoutButton {
+  display: flex;
+  margin-top: auto;
+  background: none;
+  border-radius: 30px;
+  border: 1px solid rgba(249, 249, 249, 0.2);
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  color: #f9f9f9;
+  font-size: 14px;
+  font-weight: 700;
+  text-wrap: nowrap;
+  transition: border 0.3s, color 0.3s;
+
+  &:hover {
+    border: 1px solid #4f92f7;
+  }
+
+  @include tablet {
+    display: flex;
+    order: 1;
+    font-size: 16px;
+    line-height: 18px; /* 112.5% */
+    letter-spacing: 0.32px;
+  }
+}
+
+.rigth {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+  height: 100%;
+}
+
+.userAvatar {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #262626;
+  border-radius: 50%;
+  color: #f9f9f9;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  outline: 1px solid rgba(249, 249, 249, 0.2);
+  outline-offset: -1px;
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.userAvatar1 {
+  display: none !important;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #262626;
+  border-radius: 50%;
+  color: #f9f9f9;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  outline: 1px solid rgba(249, 249, 249, 0.2);
+  outline-offset: -1px;
+  @include tablet {
+    display: flex !important;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.menuContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @include tablet {
+    flex-direction: row-reverse;
+  }
+}
+
+.menuIcon {
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.closeIcon {
+  position: absolute;
+  top: 34px;
+  right: 40px;
+  cursor: pointer;
+  @include tablet {
+    display: none;
+  }
+}
+.closeIconSvg {
+  width: 28px;
+  height: 28px;
+}
+
+.menuLogo {
+  width: 28px;
+  height: 28px;
+}

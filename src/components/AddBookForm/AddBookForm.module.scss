@@ -1,0 +1,149 @@
+@import "../../styles/mixins.scss";
+
+.addBookFormContainer {
+  width: 100%;
+  max-width: 335px;
+  margin: 0 auto;
+
+  border-radius: 30px;
+  background: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @include tablet {
+    max-width: 295px;
+  }
+  @include desktop {
+    flex-direction: column;
+    max-width: 353px;
+    gap: 20px;
+    height: 100%;
+  }
+}
+
+.label {
+  color: #f9f9f9;
+  margin-left: 14px;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px; /* 120% */
+  letter-spacing: -0.2px;
+  margin-bottom: 8px;
+  @include tablet {
+    font-size: 14px;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+.labelDesk {
+  display: none;
+  @include desktop {
+    display: block;
+    margin-left: 14px;
+    margin-bottom: 8px;
+    color: #f9f9f9;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+  }
+}
+
+.filterInputWrapper {
+  display: flex;
+  align-items: center;
+  background: #262626;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 8px;
+  text-wrap: nowrap;
+  @include tablet {
+    padding: 16px 57px 16px 14px;
+    height: 50px;
+  }
+}
+
+.filterLabel {
+  color: #686868;
+  text-align: center;
+  margin-right: 10px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.24px;
+  @include tablet {
+    font-size: 14px;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+  }
+}
+
+.input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #f9f9f9;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include tablet {
+    font-size: 14px;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+  }
+}
+
+.input::placeholder {
+  color: #f9f9f9;
+
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: -0.24px;
+  @include tablet {
+    font-size: 14px;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+  }
+}
+
+.button {
+  display: inline-flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  border: 1px solid rgba(249, 249, 249, 0.2);
+  background: transparent;
+  margin-top: 12px;
+  align-self: flex-start;
+  font-family: Gilroy;
+  color: #f9f9f9;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: 0.28px;
+  @include tablet {
+    margin-top: 30px;
+    padding: 12px 28px;
+    font-size: 16px;
+    line-height: 18px; /* 112.5% */
+    letter-spacing: 0.32px;
+    height: 42px;
+  }
+  @include desktop {
+    margin-top: 12px;
+  }
+}

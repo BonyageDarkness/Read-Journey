@@ -1,0 +1,116 @@
+@import "../../styles/mixins.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.label {
+  display: flex;
+
+  flex-direction: column;
+  color: #f9f9f9;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px; /* 120% */
+  letter-spacing: -0.2px;
+  margin-left: 14px;
+  margin-bottom: 8px;
+  @include tablet {
+    font-size: 14px;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+  }
+}
+
+.readingInputWrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background: #262626;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 20px;
+  text-wrap: nowrap;
+  @include tablet {
+    padding: 16px 14px;
+    height: 44px;
+  }
+  @include desktop {
+    height: 50px;
+  }
+}
+
+.readingLabel {
+  color: #686868;
+  text-align: center;
+  margin-right: 10px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.24px;
+  @include tablet {
+    font-size: 14px;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+  }
+}
+
+.readingInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #f9f9f9;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  @include tablet {
+    font-size: 14px;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+  }
+}
+
+.readingInput::placeholder {
+  color: #f9f9f9;
+
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: -0.24px;
+  @include tablet {
+    font-size: 14px;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+  }
+}
+
+.button {
+  display: inline-flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 30px;
+  border: 1px solid rgba(249, 249, 249, 0.2);
+  background: transparent;
+  color: #f9f9f9;
+  font-family: Gilroy;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: 0.28px;
+  @include tablet {
+    padding: 12px 28px;
+    font-size: 16px;
+    line-height: 18px; /* 112.5% */
+    letter-spacing: 0.32px;
+  }
+}

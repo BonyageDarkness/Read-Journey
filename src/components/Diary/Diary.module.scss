@@ -1,0 +1,287 @@
+@import "../../styles/mixins.scss";
+
+.progressNone {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.empty {
+  color: #f9f9f9;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px; /* 100% */
+  letter-spacing: -0.36px;
+  margin-bottom: 14px;
+  align-items: flex-start;
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.4px;
+    margin-bottom: 20px;
+  }
+}
+
+.progress {
+  color: #686868;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.28px;
+  margin-bottom: 20px;
+  @include desktop {
+    width: 309px;
+    margin-bottom: 60px;
+  }
+}
+
+.progressBorder {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  background: #262626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  @include tablet {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 52px;
+  }
+  @include desktop {
+    margin-bottom: 183px;
+  }
+}
+
+.prorgessImg {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  @include tablet {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.containerDiary {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 0 16px;
+  margin: 0 auto;
+  max-height: 211px;
+  border-radius: 12px;
+  background: #262626;
+  position: relative;
+  overflow: visible;
+  @include tablet {
+    width: 321px;
+    max-height: 252px;
+  }
+  @include desktop {
+    max-width: 470px;
+    max-height: 373px;
+  }
+}
+
+.diaryList {
+  overflow-y: auto;
+  padding-right: 23px;
+  margin-right: -28px;
+}
+
+.diaryList::-webkit-scrollbar {
+  width: 5px;
+}
+
+.diaryList::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background: #262626;
+}
+
+.diaryList::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.diaryCard {
+  display: flex;
+  position: relative;
+  padding-left: 25px;
+  padding-bottom: 17px;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dateRow {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.date {
+  color: #f9f9f9;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: 0.24px;
+  @include tablet {
+    font-size: 16px;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: 0.32px;
+  }
+}
+
+.pages {
+  color: #686868;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: -0.24px;
+  margin-bottom: 16px;
+  @include tablet {
+    font-size: 14px;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+    margin-bottom: 22px;
+  }
+}
+
+.detailsRow {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+
+.detailes {
+  display: flex;
+  flex-direction: column;
+}
+
+.left {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  flex-direction: column;
+}
+
+.right {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  flex-direction: column;
+  max-width: 43px;
+  @include tablet {
+    max-width: 59px;
+    text-align: center;
+  }
+}
+
+.percent {
+  color: #f9f9f9;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.28px;
+  @include tablet {
+    font-size: 20ox;
+    line-height: 20px;
+    letter-spacing: -0.4px;
+  }
+}
+
+.time,
+.speed {
+  color: #686868;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px; /* 120% */
+  letter-spacing: -0.2px;
+  @include tablet {
+    font-size: 12px;
+    line-height: 14px; /* 116.667% */
+    letter-spacing: -0.24px;
+  }
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  color: #686868;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+
+  &:hover {
+    color: #e90516;
+  }
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.timeline {
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #1f1f1f;
+  z-index: 0;
+  @include tablet {
+    left: 9px;
+  }
+}
+
+.circleWrapper {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-color: none transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  @include tablet {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.circleIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.graphIcon {
+  width: 43px;
+  height: 18px;
+  flex-shrink: 0;
+  @include tablet {
+    width: 59px;
+    height: 25px;
+  }
+}
+
+.inactiveCircle {
+  color: #686868;
+}
+
+.inactiveDate {
+  color: #686868;
+}

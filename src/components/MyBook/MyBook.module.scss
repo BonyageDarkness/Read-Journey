@@ -1,0 +1,104 @@
+@import "../../styles/mixins.scss";
+
+.myBookWrapper {
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    width: 100%;
+  }
+  @include desktop {
+    flex-direction: column;
+    gap: 0;
+    height: 651px;
+  }
+}
+
+.myBookReading {
+  @include tablet {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  @include desktop {
+    width: 100%;
+  }
+}
+
+.myBookTabs {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  @include desktop {
+    width: 100%;
+  }
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.diaryTitle {
+  color: #f9f9f9;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px; /* 100% */
+  letter-spacing: -0.36px;
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.4px;
+  }
+}
+
+.buttonIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.tabButton {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  border-radius: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  color: #686868;
+  transition: stroke 0.3s ease;
+  @include tablet {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.tabButton.active .icon {
+  color: #f9f9f9;
+}
+
+.progressText {
+  display: none;
+  color: #686868;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.28px;
+  margin-bottom: 20px;
+  width: 293px;
+  @include desktop {
+    display: block;
+  }
+}

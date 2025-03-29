@@ -1,0 +1,286 @@
+@import "../../styles/mixins.scss";
+
+.libraryWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 40px 20px 65px 20px;
+  width: 100%;
+  max-width: 335px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: #1f1f1f;
+  margin: 0 auto;
+  @include tablet {
+    max-width: 704px;
+    padding: 40px;
+  }
+  @include desktop {
+    max-width: 847px;
+    padding: 40px 40px 28px 40px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.title {
+  color: #f9f9f9;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px; /* 100% */
+  letter-spacing: -0.4px;
+}
+
+.booksList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 21px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: 1440px) {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    row-gap: 27px;
+  }
+}
+
+.bookCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
+  background: transparent;
+  border-radius: 16px;
+  height: 100%;
+  width: 100%;
+  max-width: 137px;
+}
+
+.bookImage {
+  width: 100%;
+  max-width: 137px;
+  height: 100%;
+  height: 208px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.bookInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 8px;
+  @include tablet {
+    gap: 20px;
+  }
+}
+
+.bookDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.bookTitle {
+  color: #f9f9f9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.28px;
+  max-width: 100%;
+}
+
+.bookAuthor {
+  margin-top: 2px;
+  color: #686868;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px; /* 120% */
+  letter-spacing: -0.2px;
+}
+
+.removeButton {
+  align-self: flex-start;
+  background: rgba(232, 80, 80, 0.1);
+  border: 1px solid rgba(232, 80, 80, 0.2);
+  border-radius: 50%;
+  flex-shrink: 0;
+  padding: 7px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(232, 80, 80, 0.2);
+  }
+}
+
+.removeIcon {
+  width: 14px;
+  height: 14px;
+  color: #e85050;
+}
+
+.booksCount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 49px 49px 60px 49px;
+  flex-direction: column;
+  gap: 10px;
+  @include tablet {
+    margin: 72px 175px 120px 175px;
+    gap: 20px;
+  }
+  @include desktop {
+    margin: 133px 246px 204px 247px;
+    gap: 20px;
+  }
+}
+
+.booksCountWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  background-color: #262626;
+  border-radius: 50%;
+  border: none;
+  @include tablet {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+.dashboardBookImg {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  @include tablet {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.booksCountText {
+  text-align: center;
+  color: #686868;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.28px;
+}
+
+.booksCountText span {
+  color: #f9f9f9;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.28px;
+}
+
+.customSelectWrapper {
+  position: relative;
+  width: 120px;
+  @include tablet {
+    width: 153px;
+  }
+}
+
+.listboxContainer {
+  position: relative;
+}
+
+.listboxButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background-color: transparent;
+  border-radius: 12px;
+  border: 1px solid #3e3e3e;
+  color: #f9f9f9;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: -0.24px;
+  cursor: pointer;
+  width: 100%;
+  @include tablet {
+    padding: 14px;
+    font-size: 14px;
+    line-weight: 18px;
+    letter-spacing: -0.28px;
+  }
+}
+
+.chevronIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.listboxOptions {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 4px;
+  padding: 14px;
+  gap: 7px;
+  border-radius: 12px;
+  background: #262626;
+  width: 100%;
+  z-index: 10;
+  overflow: hidden;
+
+  color: #686868;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: -0.24px;
+  @include tablet {
+    margin-top: 8px;
+    font-size: 14px;
+    line-weight: 18px;
+    letter-spacing: -0.28px;
+  }
+}
+
+.listboxOption {
+  cursor: pointer;
+
+  &:hover,
+  &.activeOption {
+    color: #f9f9f9;
+  }
+}
+.loaderWrapper {
+  width: 120px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
