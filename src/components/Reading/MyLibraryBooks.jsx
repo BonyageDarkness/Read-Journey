@@ -158,7 +158,7 @@ export default function MyLibraryBooks() {
                       onClick={() => handleRemove(book._id)}
                     >
                       <svg className={styles.removeIcon}>
-                        <use href="/public/sprite.svg#icon-trash-2" />
+                        <use href="/sprite.svg#icon-trash-2" />
                       </svg>
                     </button>
                   </div>
