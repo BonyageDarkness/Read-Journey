@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { logout } from "../../redux/auth/authSlice";
+import { logout, clearAuthStatus } from "../../redux/auth/authSlice";
 import styles from "./Header.module.scss";
 
 export default function Header() {
@@ -19,6 +19,7 @@ export default function Header() {
     dispatch(logout());
     localStorage.removeItem("token");
     setMenuOpen(false);
+    dispatch(clearAuthStatus());
     navigate("/signin");
   };
 

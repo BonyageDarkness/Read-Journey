@@ -29,6 +29,10 @@ const authSlice = createSlice({
       localStorage.setItem("token", action.payload);
       localStorage.setItem("logoutTime", Date.now() + 60 * 60 * 1000);
     },
+    clearAuthStatus(state) {
+      state.isLoading = false;
+      state.error = null;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -65,5 +69,5 @@ const authSlice = createSlice({
   },
 });
 
-export const { logout } = authSlice.actions;
+export const { logout, clearAuthStatus } = authSlice.actions;
 export default authSlice.reducer;

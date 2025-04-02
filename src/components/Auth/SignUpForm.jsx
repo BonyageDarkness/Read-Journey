@@ -17,6 +17,7 @@ import {
   selectIsLoading,
   selectAuthError,
 } from "../../redux/auth/authSelectors";
+import { clearAuthStatus } from "../../redux/auth/authSlice";
 
 const schema = yup.object().shape({
   name: yup.string().required("Name is required"),
@@ -51,6 +52,7 @@ export default function SignUpForm() {
     try {
       await dispatch(registerUser(data)).unwrap();
       toast.success("Registration successful!");
+      dispatch(clearAuthStatus());
       navigate("/signin");
     } catch (error) {
       toast.error(error || "Registration failed");
